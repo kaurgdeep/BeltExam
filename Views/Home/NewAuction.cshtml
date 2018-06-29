@@ -1,0 +1,31 @@
+@model Auction
+<a href="Logout" style="float:right">Logout</a></p>
+<a href="/dashboardbutton" style="float:right; padding-right:25px">Dashboard</a>
+
+
+<form asp-action="CreateAuction" asp-controller="Home" method="POST">
+
+
+    <label asp-for="Product">Product Name</label>
+    <span asp-validation-for="Product"></span>
+    <input type="text" asp-for="Product"><br><br>
+
+    <label asp-for="Startingbid">Starting Bid </label>
+    <span asp-validation-for="Startingbid"></span>
+    <input type="text" asp-for="Startingbid"><br><br>
+
+    <label asp-for="Enddate">End Date </label>
+    <span asp-validation-for="Enddate"></span>
+    <input type="Date" asp-for="Enddate"><br><br>
+
+    <label asp-for="Description">Description </label>
+    <span asp-validation-for="Description"></span>
+    <textarea asp-for="Description" id="" cols="30" rows="10"></textarea>
+
+    <input type="submit" value="Create Auction">
+
+</form>
+
+
+
+    

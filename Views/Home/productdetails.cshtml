@@ -1,0 +1,18 @@
+@model Bid
+<a href="Logout" style="float:right">Logout</a></p>
+<a href="/dashboardbutton" style="float:right; padding-right:25px">Dashboard</a>
+
+<h1>@ViewBag.auctions.Product</h1>
+
+<h2>Credited by:  @ViewBag.Users.FirstName</h2>
+
+<h3>Description: @ViewBag.auctions.Description</h3>
+
+<form asp-action="" asp-controller="Home" method="POST">
+
+    <label asp-for="Yourbid">Your Bid Here</label>
+    <span asp-validation-for="Yourbid"></span>
+    <input type="text" asp-for="Yourbid" value=""><br><br>
+
+    <input type="submit" value="Bid!">
+</form>
